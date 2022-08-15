@@ -7,26 +7,106 @@ header {
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
+		position: relative;
 
-		ul {
+		.nav-list-container {
 			display: flex;
 			align-items: center;
 			list-style: none;
+
+			li {
+				margin: 0 1rem;
+				display: flex;
+				align-items: center;
+				gap: 6px;
+			}
+
+			a {
+				text-decoration: none;
+				color: $textColor;
+				font-weight: 300;
+				transition: all 0.3s ease;
+
+				&:hover {
+					color: $primaryBtn;
+				}
+			}
 		}
 
-    .logo {
-      margin-right: 2rem;
-    }
-
-		li {
-			margin: 0 1rem;
-			
+		.logo {
+			margin-right: 2rem;
 		}
 
-		a {
-			text-decoration: none;
-      color: $textColor;
-      font-weight: 300;
+		.secondary-btn {
+			border: 2px solid $primaryBtn;
+			padding: 0.75rem 1.25rem;
+			border-radius: 16px;
+			cursor: pointer;
+			transition: all 0.3s ease;
 		}
+	}
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.features-dropdown {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	top: 46px;
+	left: 65px;
+	background-color: #fff;
+	padding: 1.5rem;
+	border-radius: 10px;
+
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	.icons,
+	.titles {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: $textColor;
+	}
+
+	img {
+		margin-right: 10px;
+	}
+}
+
+.company-dropdown {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 46px;
+	left: 230px;
+	background-color: #fff;
+	padding: 1.5rem;
+	border-radius: 10px;
+gap: 20px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: $textColor;
 	}
 }
