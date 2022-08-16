@@ -41,49 +41,132 @@ body {
 		h1 {
 			margin-top: 7rem;
 			font-size: 60px;
-      span {
-        display: block;
-      }
+			span {
+				display: block;
+			}
 		}
 
-    p {
-      line-height: 1.25;
-     
-        color: $textColor;
-    }
+		p {
+			line-height: 1.25;
 
-    .primary-btn {
-      border: none;
-      border-radius: 16px;
-      width: 150px;
-      padding: 1rem;
-      background-color: $primaryBtn;
-      color: #fff;
-      transition: all .3s ease;
-      border: 1px solid $primaryBtn;
+			color: $textColor;
+		}
 
-       &:hover {
-        background-color: $secondaryBtn;
-        color: $primaryBtn;
-      }
-    }
+		.primary-btn {
+			border: none;
+			border-radius: 16px;
+			width: 150px;
+			padding: 1rem;
+			background-color: $primaryBtn;
+			color: #fff;
+			transition: all 0.3s ease;
+			border: 1px solid $primaryBtn;
 
+			&:hover {
+				background-color: $secondaryBtn;
+				color: $primaryBtn;
+			}
+		}
 
 		.sponsers {
 			display: flex;
 			justify-content: space-between;
 			list-style: none;
 			margin-top: auto;
+
+			
 		}
 	}
 
 	.image-container {
 		height: 600px;
 		width: 50%;
-		img {
+
+		.mobile-hero {
+			display: none;
+		}
+		.desktop-hero {
 			height: 100%;
 			width: 100%;
 			object-fit: contain;
 		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	header {
+		padding: 0;
+	}
+	.hero-container {
+		padding: 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+
+		.content {
+			width: 100%;
+			padding: 0 1rem;
+			align-items: center;
+			gap: 1rem;
+
+			h1 {
+				font-size: 32px;
+				margin-top: 2rem;
+
+				span {
+					display: inline;
+				}
+			}
+
+			p {
+				font-size: 16px;
+			}
+
+			.primary-btn {
+				width: 120px;
+        margin-bottom: 3rem;
+			}
+		}
+
+		.image-container {
+			height: 100%;
+			width: 100%;
+
+			.mobile-hero {
+				display: block;
+				width: 100%;
+			}
+			.desktop-hero {
+				display: none;
+			}
+		}
+	}
+
+	header {
+		padding: 1rem;
+		.navigation {
+			.nav-list-container {
+				li {
+					display: none;
+				}
+				.menu {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.sponsers {
+    width: 100%;
+		li {
+			img {
+				width: 50px;
+			}
+		}
+	}
+
+	.image-container {
+		height: 100%;
+		width: auto;
 	}
 }

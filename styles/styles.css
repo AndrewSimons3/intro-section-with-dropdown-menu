@@ -20,6 +20,9 @@ header .navigation .nav-list-container li {
   align-items: center;
   gap: 6px;
 }
+header .navigation .nav-list-container .menu {
+  display: none;
+}
 header .navigation .nav-list-container a {
   text-decoration: none;
   color: hsl(0deg, 0%, 41%);
@@ -156,9 +159,74 @@ body {
   height: 600px;
   width: 50%;
 }
-.hero-container .image-container img {
+.hero-container .image-container .mobile-hero {
+  display: none;
+}
+.hero-container .image-container .desktop-hero {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    padding: 0;
+  }
+  .hero-container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .hero-container .content {
+    width: 100%;
+    padding: 0 1rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-container .content h1 {
+    font-size: 32px;
+    margin-top: 2rem;
+  }
+  .hero-container .content h1 span {
+    display: inline;
+  }
+  .hero-container .content p {
+    font-size: 16px;
+  }
+  .hero-container .content .primary-btn {
+    width: 120px;
+    margin-bottom: 3rem;
+  }
+  .hero-container .image-container {
+    height: 100%;
+    width: 100%;
+  }
+  .hero-container .image-container .mobile-hero {
+    display: block;
+    width: 100%;
+  }
+  .hero-container .image-container .desktop-hero {
+    display: none;
+  }
+  header {
+    padding: 1rem;
+  }
+  header .navigation .nav-list-container li {
+    display: none;
+  }
+  header .navigation .nav-list-container .menu {
+    display: block;
+  }
+  .sponsers {
+    width: 100%;
+  }
+  .sponsers li img {
+    width: 50px;
+  }
+  .image-container {
+    height: 100%;
+    width: auto;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -14,12 +14,17 @@ header {
 			align-items: center;
 			list-style: none;
 
+
 			li {
 				margin: 0 1rem;
 				display: flex;
 				align-items: center;
 				gap: 6px;
 			}
+
+      .menu {
+        display: none;
+      }
 
 			a {
 				text-decoration: none;
