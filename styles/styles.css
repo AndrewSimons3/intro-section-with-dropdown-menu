@@ -9,6 +9,9 @@ header .navigation {
   width: 100%;
   position: relative;
 }
+header .navigation #menu-btn {
+  display: none;
+}
 header .navigation .nav-list-container {
   display: flex;
   align-items: center;
@@ -19,9 +22,6 @@ header .navigation .nav-list-container li {
   display: flex;
   align-items: center;
   gap: 6px;
-}
-header .navigation .nav-list-container .menu {
-  display: none;
 }
 header .navigation .nav-list-container a {
   text-decoration: none;
@@ -108,6 +108,9 @@ body {
   font-size: 18px;
   font-family: "Epilogue", sans-serif;
 }
+body #sidenav {
+  display: none;
+}
 
 .container {
   height: 100%;
@@ -169,7 +172,53 @@ body {
      object-fit: contain;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
+  body #sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #fff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    display: block;
+  }
+  body #close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+  }
+  body .sidenav-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 1rem 0 1rem;
+  }
+  body .sidenav-list-container li {
+    list-style: none;
+    margin: 1rem 0;
+  }
+  body .sidenav-list-container a {
+    color: hsl(0deg, 0%, 41%);
+    text-decoration: none;
+  }
+  body .sidenav-list-container .side-nav-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .sidenav-list-container .secondary-btn {
+    border: 2px solid hsl(0deg, 0%, 8%);
+    padding: 0.75rem 3rem;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
   header {
     padding: 0;
   }
@@ -197,7 +246,7 @@ body {
   }
   .hero-container .content .primary-btn {
     width: 120px;
-    margin-bottom: 3rem;
+    margin: 2rem 0;
   }
   .hero-container .image-container {
     height: 100%;
@@ -213,10 +262,13 @@ body {
   header {
     padding: 1rem;
   }
+  header .navigation #menu-btn {
+    display: block;
+  }
   header .navigation .nav-list-container li {
     display: none;
   }
-  header .navigation .nav-list-container .menu {
+  header .navigation .nav-list-container .menu-btn {
     display: block;
   }
   .sponsers {

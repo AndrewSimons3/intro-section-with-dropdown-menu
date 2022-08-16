@@ -19,7 +19,13 @@ body {
 	height: 100vh;
 	font-size: 18px;
 	font-family: 'Epilogue', sans-serif;
+
+  #sidenav {
+    display: none;
+  }
 }
+
+
 
 .container {
 	height: 100%;
@@ -73,8 +79,6 @@ body {
 			justify-content: space-between;
 			list-style: none;
 			margin-top: auto;
-
-			
 		}
 	}
 
@@ -93,7 +97,64 @@ body {
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
+  body {
+	#sidenav {
+		height: 100%; /* 100% Full-height */
+		width: 0; /* 0 width - change this with JavaScript */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Stay on top */
+		top: 0; /* Stay at the top */
+		right: 0;
+		background-color: #fff; /* Black*/
+		overflow-x: hidden; /* Disable horizontal scroll */
+		transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+		display: block;
+  }
+
+		#close-btn {
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 1rem;
+		}
+
+   
+
+		.sidenav-list-container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 4rem 1rem 0 1rem;
+
+			li {
+				list-style: none;
+				margin: 1rem 0;
+			}
+
+			a {
+				color: $textColor;
+				text-decoration: none;
+			}
+
+			.side-nav-login {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.secondary-btn {
+				border: 2px solid $primaryBtn;
+				padding: 0.75rem 3rem;
+				border-radius: 16px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+		}
+	}
+
 	header {
 		padding: 0;
 	}
@@ -124,7 +185,7 @@ body {
 
 			.primary-btn {
 				width: 120px;
-        margin-bottom: 3rem;
+				margin: 2rem 0;
 			}
 		}
 
@@ -145,11 +206,14 @@ body {
 	header {
 		padding: 1rem;
 		.navigation {
+       #menu-btn {
+      display: block;
+    }
 			.nav-list-container {
 				li {
 					display: none;
 				}
-				.menu {
+				.menu-btn {
 					display: block;
 				}
 			}
@@ -157,7 +221,7 @@ body {
 	}
 
 	.sponsers {
-    width: 100%;
+		width: 100%;
 		li {
 			img {
 				width: 50px;

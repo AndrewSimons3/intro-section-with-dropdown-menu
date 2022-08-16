@@ -9,6 +9,10 @@ header {
 		width: 100%;
 		position: relative;
 
+    #menu-btn {
+        display: none;
+      }
+
 		.nav-list-container {
 			display: flex;
 			align-items: center;
@@ -22,9 +26,7 @@ header {
 				gap: 6px;
 			}
 
-      .menu {
-        display: none;
-      }
+      
 
 			a {
 				text-decoration: none;
