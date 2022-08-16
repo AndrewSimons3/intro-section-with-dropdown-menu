@@ -172,6 +172,21 @@ body #sidenav {
      object-fit: contain;
 }
 
+@media only screen and (max-width: 1050px) {
+  .hero-container {
+    display: flex;
+    padding: 0;
+  }
+  .hero-container .content {
+    padding: 2rem;
+  }
+  .sponsers {
+    width: 100%;
+  }
+  .sponsers li img {
+    width: 50px;
+  }
+}
 @media only screen and (max-width: 700px) {
   body #sidenav {
     height: 100%; /* 100% Full-height */

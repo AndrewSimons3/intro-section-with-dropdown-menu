@@ -20,6 +20,7 @@ function toggleCompanyDropdown() {
 function openSidenav() {
   sidenav.style.width = '250px';
   container.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+
   
 }
 
